@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Plantas</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable var="plant" value="#{PlantaController.listaPlantas}" frame="border" border="1">
+                <h:column>
+                    <f:facet name="header">Código</f:facet>
+                    #{plant.codigo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Nombre</f:facet>
+                    #{plant.nombre}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Nombre Cientifico</f:facet>
+                    #{plant.nombreCientifico}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Tipo</f:facet>
+                    #{plant.tipo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Familia</f:facet>
+                    #{plant.familia}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Especie</f:facet>
+                    #{plant.especie}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Genero</f:facet>
+                    #{plant.genero}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Region</f:facet>
+                    #{plant.region}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Clase</f:facet>
+                    #{plant.clase}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Division</f:facet>
+                    #{plant.division}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Color</f:facet>
+                    #{plant.color}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Quemar</f:facet>
+                    <h:commandButton value="Q" action="#{PlantaController.quemarPlanta(plant)}"></h:commandButton>
+                </h:column>
+            </h:dataTable>
+            
+            <h:dataTable var="plant2" value="#{PlantaController.listaPlantas2}" frame="border" border="1">
+                <h:column>
+                    <f:facet name="header">Código</f:facet>
+                    #{plant2.codigo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Nombre</f:facet>
+                    #{plant2.nombre}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Nombre Cientifico</f:facet>
+                   #{plant2.nombreCientifico}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Tipo</f:facet>
+                    #{plant2.tipo}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Familia</f:facet>
+                    #{plant2.familia}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Especie</f:facet>
+                    #{plant2.especie}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Genero</f:facet>
+                    #{plant2.genero}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Region</f:facet>
+                    #{plant2.region}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Clase</f:facet>
+                    #{plant2.clase}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Division</f:facet>
+                    #{plant2.division}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Color</f:facet>
+                    #{plant2.color}
+                </h:column>
+            </h:dataTable>
+            <h:commandButton value="Volver" action="#{PlantaController.botonVolver()}"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
